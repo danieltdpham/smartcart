@@ -1,0 +1,100 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home:Smart Cart</title>
+	<link rel="stylesheet" href="themes/OGTHeme.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.structure-1.4.5.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.structure-1.4.5.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script id="panel-init">
+		$(function() {
+			$( "body>[data-role='panel']" ).panel().enhanceWithin();
+		});
+	</script>
+	
+	<script>
+		function alert() {
+			alert("Location ON");
+		}
+	</script>
+	
+</head>
+
+<body>
+	<div data-role="page" data-theme="a">
+		<!-- Header -->
+		<div data-role="header" data-position="fixed">
+			<h1>Welcome!</h1>
+			<a href="#settings_panel" data-role="button" data-icon="gear" data-iconpos="notext">Settings</a>			
+		</div>
+
+		<!-- Content -->
+		<div data-role="content" data-theme="a" style="height:100%;">
+			<label>Scan Item to Add to Cart</label><input type="text" /><br />
+			
+			<div class="ui-grid-a" >
+			    <div class="ui-block-a" style="width: 70%;"><div class="ui-bar ui-bar-a">				
+			    	<ul data-role="listview" data-divider-theme="a">
+			    		<li data-role="list-divider">Shopping Cart</li>
+						<li><a href="item_1.html">Tortillas<br />Quantity: 1</a></li>
+						<li>Item 2<br />Quantity: 3</li>
+						<li>Item 3<br />Quantity: 1</li>
+					</ul></div></div>
+			    <div class="ui-block-b"style="width: 30%;"><div class="ui-bar ui-bar-a" >	
+			    	<ul data-role="listview" data-theme="a">
+			    		<li data-role="list-divider">Budget Calculator</li>
+						<li><a href="#editbudget">Budget: $150.00</a></li>
+					 	<li>Cart Balance: $80.00</li>
+						<li data-role="list-divider">Available: $70.00</li>
+			    		<li data-role="list-divider">Shopping List</li>
+						<li><a href="item_1.html">Tortillas<br />Quantity: 3</a></li>
+					 	<li>Item 2</li>
+					 	<li>Item 3</li>
+					</ul></div></div>
+			</div><br />
+			
+			<div class="ui-grid-b ui-responsive">
+			    <div class="ui-block-a" style="width: 60%;"><input type="text" /></div>
+				<div class="ui-block-b" style="width: 10%;">	
+					<a href="results.html" data-role="button" data-icon="search">Search</a>
+				</div>
+				<div class="ui-block-c" style="width: 10%;">	
+			    	<input type="button" data-icon="bars" value="Flyer">
+				</div>
+			    <div class="ui-block-d" style="width: 10%;">
+					<button data-icon="location" onclick="alert();">ON/OFF</button><label>Location:</label></div>
+				<div class="ui-block-e" style="width: 10%;"><input type="button" data-icon="alert" data-iconpos="right" value="HELP!"></div>
+			</div>
+				
+				
+				
+						
+		</div>
+		
+
+	
+		<!-- Footer -->
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<h3>Copyright &copy; 2015</h3>
+		</div>
+	</div>
+	
+
+	<!-- Settings Panel  -->
+	<div data-role="panel" id="settings_panel" data-position="right" data-display="overlay" data-theme="a">
+		<ul data-role="listview" data-icon="false">
+		    <li><a href="#">Shopping Cart</a></li>
+		    <li><a href="#">Edit Shopping List</a></li>
+		    <li><a href="#">Settings</a></li>
+		    <li><a href="index.html">Log Out</a></li>
+		</ul>
+	</div>
+	
+</body>
+
+
+</html>
